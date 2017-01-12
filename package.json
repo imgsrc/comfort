@@ -1,0 +1,23 @@
+{
+  "name": "comfort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-sourcemaps": "^2.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imgsrc/comfort.git"
+  },
+  "author": "esx <nikolaev.i@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imgsrc/comfort/issues"
+  },
+  "homepage": "https://github.com/imgsrc/comfort#readme"
+}
