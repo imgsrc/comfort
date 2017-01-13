@@ -37,6 +37,7 @@ body {
   font-size: 16px;
   min-width: 320px;
   position: relative;
+  margin: 0;
   line-height: 1.75;
   font-family: $default-font;
   overflow-x: hidden;
@@ -48,15 +49,24 @@ body {
   height: auto;
 }
 
-.main-head  {
+header {
   position: relative;
 }
 
+.mbYTP_wrapper::before {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: 10;
+}
 
-
-
-
-
+.bg_container {
+  z-index: 20;
+  color: #fff;
+}
 
 // Всегда в конце
 @import "media";

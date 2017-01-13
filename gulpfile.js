@@ -18,11 +18,9 @@ var gulp = require('gulp'),
 // Скрипты проекта
 gulp.task('scripts', function () {
     return gulp.src([
-        'app/libs/jquery/dist/jquery.min.js',
-        'app/libs/bootstrap/dist/js/bootstrap.min.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'app/libs/YTPlayer/dist/jquery.mb.YTPlayer.min.js',
-        'app/libs/device/dist/devicejs.min.js',
+        'app/libs/mobile-detect/mobile-detect.min.js',
     ])
         .pipe(concat('scripts.min.js'))
         .pipe(uglify())
