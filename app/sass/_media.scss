@@ -3,6 +3,43 @@
 
 /*==========  Desktop First  ========== */
 
+@media only screen and (max-width: 1370px) {
+  .bg_container {
+    .top-pannel {
+      padding: 15px 0;
+      &-content {
+        .top-phone {
+          padding-bottom: 20px;
+
+        }
+      }
+    }
+  }
+  .bg-content-wrapper {
+    top: 25%;
+    .bg-content {
+      h1 {
+        font-size: em(45px);
+      }
+    }
+  }
+  .bg-form-order {
+    top: 53%;
+    .form-top {
+      padding: {
+        top: 15px;
+        bottom: 25px;
+        left: 20px;
+        right: 20px;
+      }
+      input {
+        padding: 12px 15px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
   .bg-form-order {
