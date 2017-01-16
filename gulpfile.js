@@ -21,6 +21,7 @@ gulp.task('scripts', function () {
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'app/libs/YTPlayer/dist/jquery.mb.YTPlayer.min.js',
         'app/libs/mobile-detect/mobile-detect.min.js',
+        'app/libs/wow/dist/wow.min.js',
     ])
         .pipe(concat('scripts.min.js'))
         .pipe(uglify())

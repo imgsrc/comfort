@@ -5,7 +5,14 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  /* */
+  .bg-form-order {
+    .form-top {
+      input {
+        padding: 10px 10px;
+        font-size: em(16px);
+      }
+    }
+  }
 }
 
 /* Medium Devices, Desktops */
@@ -15,7 +22,15 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  /* */
+  .bg_container {
+    .top-pannel {
+      &-content {
+        h2 {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */

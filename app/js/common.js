@@ -4,7 +4,7 @@ $(document).ready(function() {
     var md = new MobileDetect(window.navigator.userAgent);
     if(!md.mobile()) {
         $('.player').mb_YTPlayer({
-            videoURL: 'https://youtu.be/tpNYXgG1o7o',
+            videoURL: 'https://youtu.be/-nGuAFKg7FQ',
             containment: 'header',
             showControls: false,
             autoPlay: true,
