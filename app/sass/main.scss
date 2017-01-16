@@ -275,9 +275,6 @@ header {
     padding: 2em 4em;
     text-align: left;
     background: #130d08 url(../img/wood_1.png) repeat;
-    .btn {
-      color: #fff;
-    }
     .heading {
       margin-bottom: 30px;
       color: #fff;
@@ -318,6 +315,9 @@ header {
   &-bg {
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .text-center {
+    margin-top: 50px;
   }
 }
 
