@@ -243,7 +243,7 @@ header {
       font-size: em(20px);
       margin-bottom: 50px;
       outline: none;
-      &:hover, &:focus {
+      &:focus {
         background-color: rgba($gray-color, .8);
       }
     }
@@ -274,7 +274,7 @@ header {
   &-text {
     padding: 2em 4em;
     text-align: left;
-    background: #130d08 url(../img/wood_1.png) repeat;
+    background: #130d08 url(../img/1.jpg) repeat;
     .heading {
       margin-bottom: 30px;
       color: #fff;
@@ -296,7 +296,8 @@ header {
     }
     p {
       line-height: 2;
-      color: #a99c92;
+      color: #F5F5F5;
+      font-size: em(18px);
       span.firstcharacter {
         float: left;
         font-size: 75px;
