@@ -22,6 +22,7 @@ gulp.task('scripts', function () {
         'app/libs/YTPlayer/dist/jquery.mb.YTPlayer.min.js',
         'app/libs/mobile-detect/mobile-detect.min.js',
         'app/libs/wow/dist/wow.min.js',
+        'app/libs/owl.carousel/dist/owl.carousel.min.js',
     ])
         .pipe(concat('scripts.min.js'))
         .pipe(uglify())
