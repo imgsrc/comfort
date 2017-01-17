@@ -1,5 +1,10 @@
 $(window).on('load', function() {
 
+    $('.popup_content').magnificPopup({
+        type: 'inline',
+        midClick: true,
+    });
+
     //Mobile Detect
     var md = new MobileDetect(window.navigator.userAgent);
     if(!md.mobile()) {
