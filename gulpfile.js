@@ -23,6 +23,8 @@ gulp.task('scripts', function () {
         'app/libs/mobile-detect/mobile-detect.min.js',
         'app/libs/wow/dist/wow.min.js',
         'app/libs/owl.carousel/dist/owl.carousel.min.js',
+        'app/libs/jquery.stellar/src/jquery.stellar.js',
+        'app/libs/jquery/dist/jquery-migrate-3.0.0.min.js',
     ])
         .pipe(concat('scripts.min.js'))
         .pipe(uglify())

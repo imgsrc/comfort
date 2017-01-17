@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(window).on('load', function() {
 
-
+    //Mobile Detect
     var md = new MobileDetect(window.navigator.userAgent);
     if(!md.mobile()) {
         $('.player').mb_YTPlayer({
@@ -39,5 +39,38 @@ $(document).ready(function() {
             }
         }
     });
+
+    // //Parallax
+    // $(window).scroll(function () {
+    //     var st = $(this).scrollTop()/20;
+    //
+    //     $(".featured img").css({
+    //         "transform" : "translate3d(0px, " + st  + "%, .01px)",
+    //         "-webkit-transform" : "translate3d(0px, " + st  + "%, .01px)"
+    //     });
+    //
+    // });
+
+    //Parallax for Stellar
+    $('.parallax').stellar({
+        verticalOffset: 300,
+        horizontalScrolling: false,
+        verticalScrolling: true,
+        parallaxBackgrounds: true,
+        offsetParent: true,
+        backgroundRatio: 2
+    });
+
+    //WOW animated plugin
+    var wow = new WOW(
+        {
+            boxClass:     'wow',
+            animateClass: 'animated',
+            offset:       100,          // отступ до элемента, когда будет срабатывать анимация, по умолчанию 0
+            mobile:       false,
+            live:         true
+        }
+    );
+    wow.init();
 
 });

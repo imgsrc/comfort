@@ -75,13 +75,14 @@ h1, h2, h3, h4, h5, h6, .button,
 
 section {
   text-align: center;
-  padding: 70px 0;
+  position: relative;
+  overflow: hidden;
   h2 {
     color: $blue-color;
     font: {
       family: $primary-font;
       weight: 600;
-      size: em(36px);
+      size: em(45px);
     }
     letter-spacing: 3px;
     margin: {
@@ -124,6 +125,15 @@ section {
   max-width: 100%;
   height: auto;
 }
+
+//.parallax {
+//  background: {
+//    attachment: fixed;
+//    position: center top;
+//    repeat: no-repeat;
+//    size: cover;
+//  }
+//}
 
 header {
   position: relative;
@@ -180,7 +190,6 @@ header {
   width: 100%;
   left: 0;
   top: 35%;
-  margin: 0 auto;
   position: absolute;
   overflow: hidden;
   text-align: center;
@@ -193,6 +202,7 @@ header {
       font-size: em(60px);
       font-weight: 400;
       margin-bottom: 0;
+      color: $blue-color;
     }
     > span {
       display: block;
@@ -277,7 +287,7 @@ header {
     background: #130d08 url(../img/1.jpg) repeat;
     .heading {
       margin-bottom: 30px;
-      color: #fff;
+      color: $blue-color;
       font-style: italic;
       font-weight: 300;
       position: relative;
@@ -287,16 +297,17 @@ header {
         content: "";
         position: absolute;
         bottom: 0;
-        width: 40px;
+        width: 50px;
         height: 2px;
         left: 50%;
-        background: #fb6e14;
+        background: $accent-color;
         margin-left: -20px;
       }
     }
     p {
       line-height: 2;
       color: #F5F5F5;
+      font-size: em(20px);
       span.firstcharacter {
         float: left;
         font-size: 75px;
@@ -320,6 +331,91 @@ header {
     margin-top: 50px;
   }
 }
+
+.feature {
+  padding: 50px 0;
+  h2 {
+    color: darken($blue-color, 10%);
+    margin-bottom: 80px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 130px;
+      width: 60px;
+      height: 2px;
+      left: 50%;
+      background: $accent-color;
+      margin-left: -20px;
+    }
+  }
+}
+
+
+.services {
+  height: 70vh;
+  background: url(../img/bg1.jpg) no-repeat center top fixed;
+  background-size: cover;
+  &::before {
+    content: '';
+    background: url("../img/slide_bg.png") repeat scroll 0 0 transparent;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: 1;
+  }
+  &-content {
+    z-index: 10;
+    position: relative;
+    color: #fff;
+    padding-bottom: 60px;
+    h2 {
+      padding: 50px 0;
+      font-family: $default-font;
+      font-weight: 500;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 130px;
+        width: 60px;
+        height: 2px;
+        left: 50%;
+        background: $accent-color;
+        margin-left: -20px;
+      }
+    }
+    .service-center {
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      float: left;
+      width: 100%;
+      margin-bottom: 35px;
+      h3 {
+        font-size: em(30px);
+        margin: 20px 0;
+        font-weight: 500;
+        color: $blue-color;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    .bottom-text {
+      margin: {
+        left: auto;
+        right: auto;
+      }
+      font: {
+        family: $default-font;
+        weight: 400;
+        size: em(26px);
+      }
+      color: $accent-color;
+    }
+  }
+}
+
 
 // Всегда в конце
 @import "media";
