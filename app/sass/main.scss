@@ -277,7 +277,7 @@ header {
     width: 50%;
   }
   &-text {
-    padding: 32px 64px;
+    padding: 32px 50px;
     background: #130d08 url(../img/1.jpg) repeat;
     .heading {
       margin-bottom: 30px;
@@ -301,7 +301,7 @@ header {
     p {
       line-height: 2;
       color: #F5F5F5;
-      font-size: em(20px);
+      font-size: em(24px);
       span.firstcharacter {
         float: left;
         font-size: 75px;
@@ -322,7 +322,7 @@ header {
     background-size: cover;
   }
   .text-center {
-    margin-top: 50px;
+    margin-top: 160px;
   }
 }
 
@@ -388,6 +388,7 @@ header {
     }
   }
 }
+
 .feat_descr {
   background-color: #fff;
   max-width: 500px;
@@ -500,6 +501,7 @@ header {
 .manufacturing {
   padding: 60px 0;
   h2 {
+    color: darken($blue-color, 10%);
     &::after {
       content: "";
       position: absolute;
@@ -513,6 +515,64 @@ header {
   }
   p {
     padding: 25px 0;
+  }
+}
+
+.contacts {
+  padding: 70px 0;
+  background: rgba($black-color, .04);
+  h2 {
+    color: darken($blue-color, 10%);
+    margin-bottom: 100px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 160px;
+      width: 60px;
+      height: 2px;
+      left: 50%;
+      background: $accent-color;
+      margin-left: -20px;
+    }
+  }
+  p {
+    margin: {
+      bottom: 40px;
+      top: -10px;
+    }
+    font-size: em(18px);
+    text-align: left;
+    color: $accent-color;
+  }
+  .contacts-form {
+    input, textarea {
+      width: 100%;
+      border: 1px solid darken($blue-color, 15%);
+      border-radius: 5px;
+    }
+    input {
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      font-size: em(16px);
+    }
+    textarea {
+      margin-bottom: 30px;
+      padding: 10px 20px;
+      font-size: em(16px);
+    }
+  }
+  .contacts-address {
+    text-align: left;
+    font-size: em(22px);
+    .item-address {
+      margin-bottom: 30px;
+    }
+    .item-phone {
+      margin-bottom: 30px;
+    }
+    .item-mail {
+      margin-bottom: 30px;
+    }
   }
 }
 
