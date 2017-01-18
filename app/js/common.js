@@ -45,17 +45,6 @@ $(window).on('load', function() {
         }
     });
 
-    // //Parallax
-    // $(window).scroll(function () {
-    //     var st = $(this).scrollTop()/20;
-    //
-    //     $(".featured img").css({
-    //         "transform" : "translate3d(0px, " + st  + "%, .01px)",
-    //         "-webkit-transform" : "translate3d(0px, " + st  + "%, .01px)"
-    //     });
-    //
-    // });
-
     //Parallax for Stellar
     $('.parallax').stellar({
         verticalOffset: 300,

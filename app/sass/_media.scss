@@ -6,7 +6,7 @@
 @media only screen and (max-width: 1370px) {
   .bg_container {
     .top-pannel {
-      padding: 15px 0;
+      padding: 10px 0;
       &-content {
         .top-phone {
           padding-bottom: 20px;
@@ -27,21 +27,34 @@
     top: 53%;
     .form-top {
       padding: {
-        top: 15px;
+        top: 10px;
         bottom: 25px;
-        left: 20px;
-        right: 20px;
+        left: 16px;
+        right: 16px;
       }
       input {
-        padding: 12px 15px;
+        padding: 10px 12px;
         margin-bottom: 35px;
       }
     }
   }
   .what-is {
     &-text {
+      padding: 20px 45px;
       p {
         font-size: em(16px);
+        margin: 10px 0;
+      }
+    }
+    .text-center {
+      margin-top: 30px;
+    }
+  }
+  .services {
+    height: 100vh;
+    &-content {
+      .service-center {
+        margin-bottom: 20px;
       }
     }
   }
