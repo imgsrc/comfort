@@ -11,7 +11,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:image" content="path/to/image.jpg">
+  <meta property="og:image" content="./img/carousel/7.jpg">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
@@ -22,7 +22,7 @@
         rel="stylesheet">
   
   
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="./css/main.min.css">
   
   <!-- Chrome, Firefox OS and Opera -->
   <meta name="theme-color" content="#000">
@@ -62,7 +62,7 @@
               </div><!-- ./top-phone -->
               
               <div class="top-button">
-                <a href="#callback" class="button popup-with-move-anim" data-form="Верхняя форма">Заказать
+                <a href="#callback" class="button popup-with-move-anim">Заказать
                   звонок</a>
               </div><!-- ./top-button -->
             </div><!-- ./col-md-3 -->
@@ -87,7 +87,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 offset-1">
-          <form id="order-top" class="form-top wow animated fadeInLeftBig">
+          <form id="order-top" class="form-top wow animated fadeInLeftBig" data-form="Верхняя форма">
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="Банный Чан">
+            <input type="hidden" name="admin_email" value="forifelse@yandex.ru">
+            <input type="hidden" name="form_subject" value="Форма вверху сайта">
+            <!-- END Hidden Required Fields -->
             <h3>Оставьте заявку</h3>
             <p>для получения консультации нашего специалиста</p>
             <div class="container">
@@ -98,7 +103,7 @@
                 <div class="col-md-4 col-sm-6">
                   <input type="tel" name="Телефон" placeholder="Ваш телефон *">
                 </div><!-- ./col-md-4 -->
-                <div class="col-md-4">
+                <div class="col-md-4 email">
                   <input type="email" name="Email" placeholder="Ваш email">
                 </div><!-- ./col-md-4 -->
               </div><!-- ./row -->
@@ -116,12 +121,17 @@
   
   <div class="what-is-2-col">
     <div class="owl-carousel">
-      <div class="item"><img src="./img/carousel/1.jpg" alt=""></div>
-      <div class="item"><img src="./img/carousel/2.jpg" alt=""></div>
-      <div class="item"><img src="./img/carousel/3.jpg" alt=""></div>
-      <div class="item"><img src="./img/carousel/4.jpg" alt=""></div>
-      <div class="item"><img src="./img/carousel/5.jpg" alt=""></div>
-      <div class="item"><img src="./img/carousel/6.jpg" alt=""></div>
+      <div class="item"><img src="./img/carousel/1.jpg" alt="Баня"></div>
+      <div class="item"><img src="./img/carousel/2.jpg" alt="Баня"></div>
+      <div class="item"><img src="./img/carousel/3.jpg" alt="Баня"></div>
+      <div class="item"><img src="./img/carousel/4.jpg" alt="Баня"></div>
+      <div class="item"><img src="./img/carousel/5.jpg" alt="Баня"></div>
+      <div class="item"><img src="./img/carousel/6.jpg" alt="Баня"></div>
+      <div class="item"><img src="./img/carousel/7.jpg" alt="Баня"></div>
+      <div class="item"><img src="./img/carousel/8.jpg" alt="Баня"></div>
+      <div class="item"><img src="./img/carousel/9.jpg" alt="Баня"></div>
+      <div class="item"><img src="./img/carousel/10.jpg" alt="Баня"></div>
+      <div class="item"><img src="./img/carousel/11.jpg" alt="Баня"></div>
     </div><!-- ./owl-carousel -->
   </div><!-- ./what-is-2-col -->
   
@@ -131,7 +141,7 @@
       райские ощущения у себя на участке. Вода прогревается открытым огнем до температуры 38-42 градусов. Тёплая
       атмосфера спокойствия, открытый воздух и дымок от костра — это самые прекрасные чувства. В воду также добавляют
       различные травы и масла для омолаживания тела.</p>
-    <p class="text-center"><a href="#" class="button">Заказать</a></p>
+    <p class="text-center"><a href="#callback" class="button popup-with-move-anim">Заказать</a></p>
   </div><!-- ./what-is-2-col what-is-text -->
 
 </section><!-- ./what-is -->
@@ -168,13 +178,13 @@
               <li><span>Лестница из лиственницы</span></li>
               <li><span>Сливной гусак</span> (оцинкованная труба с краником)</li>
             </ul>
-            
-            <p>Стоимость комплекта: <br>
-              <span>100.000</span> рублей<br>
-              80.000 рублей</p>
+  
+            <h4>Стоимость комплекта:</h4>
+            <p><span class="line-through">100.000</span> рублей</p>
+            <p><span>80.000</span> рублей</p>
             
             <div class="text-center">
-              <a href="#" class="button">Заказать</a>
+              <a href="#callback" class="button popup-with-move-anim">Заказать</a>
             </div><!-- ./text-center -->
           
           </div><!-- ./feat_descr -->
@@ -208,12 +218,12 @@
               <li><span>Сливной гусак</span> (оцинкованная труба с краником)</li>
             </ul>
             
-            <p>Стоимость комплекта: <br>
-              <span>135.000</span> рублей<br>
-              110.000 рублей</p>
+            <h4>Стоимость комплекта:</h4>
+            <p><span class="line-through">135.000</span> рублей</p>
+            <p><span>110.000</span> рублей</p>
             
             <div class="text-center">
-              <a href="#" class="button">Заказать</a>
+              <a href="#callback" class="button popup-with-move-anim">Заказать</a>
             </div><!-- ./text-center -->
           </div><!-- ./feat_descr -->
         </div><!-- ./hidden -->
@@ -242,7 +252,7 @@
 						</span>
             <h3>Заявка</h3>
             <p>Вы отправляете заявку</p>
-            <a href="#" class="button">Отправить заявку</a>
+            <a href="#callback" class="button popup-with-move-anim">Отправить заявку</a>
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
@@ -297,6 +307,11 @@
       <div class="col-md-6">
         <div class="contacts-form">
           <form class="bottom-form">
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="Банный Чан">
+            <input type="hidden" name="admin_email" value="forifelse@yandex.ru">
+            <input type="hidden" name="form_subject" value="Форма внизу сайта">
+            <!-- END Hidden Required Fields -->
             <input type="text" name="Имя" placeholder="Введите ваше имя...*" required>
             <input type="tel" name="Телефон" placeholder="Введите ваш телефон...*" required>
             <input type="email" name="Email" placeholder="Введите ваш email...">
@@ -327,6 +342,12 @@
             <a href="mailto:komfort163@mail.ru">komfort163@mail.ru</a>
           </div><!-- ./item-mail -->
           
+          <div class="item-socials">
+            <a href="https://www.instagram.com/gkcomfort/" target="_blank"><img src="img/icon/instagram.svg"
+                                                                                alt="Instagram"></a>
+            <a href="https://vk.com/gkcomfort" target="_blank"><img src="img/icon/vk.svg" alt="VK"></a>
+          </div>
+        
         </div><!-- ./contacts-address -->
       </div><!-- ./col-md-6 -->
     
@@ -335,10 +356,53 @@
   </div><!-- ./container -->
 </section><!-- ./contacts -->
 
+<div class="hidden">
+  <div class="answer_form">
+    <h3>Спасибо за отклик!</h3>
+    <p>В ближайшее время наши менеджеры обязательно свяжутся с вами</p>
+    <a href="#" class="button">Закрыть</a>
+  </div><!-- ./answer_form -->
+</div><!-- ./hidden -->
 
-<script src="js/jquery.min.js"></script>
-<script src="js/scripts.min.js"></script>
-<script src="js/common.js"></script>
+<div class="hidden">
+  
+  <form class="popup-form callback zoom-anim-dialog" id="callback">
+        
+    <!-- Hidden Required Fields -->
+    <input type="hidden" name="project_name" value="Банный чан">
+    <input type="hidden" name="admin_email" value="forifelse@yandex.ru">
+    <input type="hidden" name="form_subject" value="Новая заявка с сайта Банный Чан">
+    <!-- END Hidden Required Fields -->
+    
+    <h3>Заказать звонок</h3>
+    
+    <label>
+      <span>Ваше имя:</span>
+      <input type="text" name="Имя" placeholder="Введите имя...">
+    </label>
+    
+    <label>
+      <span>Ваш телефон:</span>
+      <input type="tel" name="Телефон" placeholder="Введите телефон..." required>
+    </label>
+    
+    <div class="text-center">
+      <button class="button">Отправить</button>
+    </div><!-- ./text-center -->
+  
+  </form><!-- ./popup-form callback zoom-anim-dialog -->
+  <input class="formname" type="hidden" name="Форма">
+</div><!-- ./hidden -->
+
+<!--[if lt IE 9]>
+<script src="./libs/html5shiv/es5-shim.min.js"></script>
+<script src="./libs/html5shiv/html5shiv.min.js"></script>
+<script src="./libs/html5shiv/html5shiv-printshiv.min.js"></script>
+<script src="./libs/respond/respond.min.js"></script>
+<![endif]-->
+
+<script src="./js/scripts.min.js"></script>
+<script src="./libs/common.js"></script>
 
 
 </body>

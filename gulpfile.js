@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync'),
+    rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     cleanCSS = require('gulp-clean-css'),
@@ -16,15 +17,26 @@ var gulp = require('gulp'),
     notify = require("gulp-notify");
 
 // Скрипты проекта
-gulp.task('scripts', function () {
+
+gulp.task('common', function () {
+    return gulp.src('app/libs/common.js')
+        .pipe(rename({suffix: '.min', prefix: ''}))
+        .pipe(uglify())
+        .pipe(gulp.dest('app/js'))
+        .pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('scripts', ['common'], function () {
     return gulp.src([
+        'app/libs/jquery/dist/jquery.js',
+        'app/libs/modernizr/modernizr.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'app/libs/YTPlayer/dist/jquery.mb.YTPlayer.min.js',
         'app/libs/mobile-detect/mobile-detect.min.js',
         'app/libs/wow/dist/wow.min.js',
         'app/libs/owl.carousel/dist/owl.carousel.min.js',
         'app/libs/jquery.stellar/src/jquery.stellar.js',
-        'app/libs/jquery/dist/jquery-migrate-3.0.0.min.js',
+        'app/libs/jquery/dist/jquery-migrate-3.0.0.min.js'
     ])
         .pipe(concat('scripts.min.js'))
         .pipe(uglify())
@@ -55,7 +67,7 @@ gulp.task('sass', function () {
 
 gulp.task('watch', ['sass', 'scripts', 'browser-sync'], function () {
     gulp.watch('app/sass/**/*.scss', ['sass']);
-    gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
+    gulp.watch(['libs/**/*.js', 'app/js/common.min.js'], ['scripts']);
     gulp.watch('app/*.html', browserSync.reload);
 });
 
@@ -69,39 +81,45 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'scripts'], function () {
 
     var buildFiles = gulp.src([
         'app/*.html',
-        'app/.htaccess'
+        'app/.htaccess',
+        'app/mail.php'
     ]).pipe(gulp.dest('dist'));
 
     var buildCss = gulp.src([
-        'app/css/main.min.css',
+        'app/css/main.min.css'
     ]).pipe(gulp.dest('dist/css'));
 
     var buildJs = gulp.src([
-        'app/js/scripts.min.js'
+        'app/js/scripts.min.js',
+        'app/js/common.min.js'
     ]).pipe(gulp.dest('dist/js'));
 
     var buildFonts = gulp.src([
-        'app/fonts/**/*']
-    ).pipe(gulp.dest('dist/fonts'));
+        'app/fonts/**/*'
+    ]).pipe(gulp.dest('dist/fonts'));
 
+    var buildIE = gulp.src([
+        'app/libs/html5shiv/*',
+        'app/libs/respond/*'
+    ]).pipe(gulp.dest('dist/libs/**/*'));
 });
 
 gulp.task('deploy', function () {
 
     var conn = ftp.create({
-        host: 'hostname.com',
-        user: 'username',
-        password: 'userpassword',
+        host: '194.58.102.22',
+        user: 'igor_verst',
+        password: '3ekSVQPA',
         parallel: 10,
         log: gutil.log
     });
 
     var globs = [
         'dist/**',
-        'dist/.htaccess',
+        'dist/.htaccess'
     ];
     return gulp.src(globs, {buffer: false})
-        .pipe(conn.dest('/path/to/folder/on/server'));
+        .pipe(conn.dest('/comfort'));
 
 });
 
