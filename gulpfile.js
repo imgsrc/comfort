@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     cleanCSS = require('gulp-clean-css'),
-    rename = require('gulp-rename'),
     del = require('del'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
@@ -67,7 +66,7 @@ gulp.task('sass', function () {
 
 gulp.task('watch', ['sass', 'scripts', 'browser-sync'], function () {
     gulp.watch('app/sass/**/*.scss', ['sass']);
-    gulp.watch(['libs/**/*.js', 'app/js/common.min.js'], ['scripts']);
+    gulp.watch(['libs/**/*.js', 'app/libs/common.js'], ['scripts']);
     gulp.watch('app/*.html', browserSync.reload);
 });
 
@@ -97,11 +96,6 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'scripts'], function () {
     var buildFonts = gulp.src([
         'app/fonts/**/*'
     ]).pipe(gulp.dest('dist/fonts'));
-
-    var buildIE = gulp.src([
-        'app/libs/html5shiv/*',
-        'app/libs/respond/*'
-    ]).pipe(gulp.dest('dist/libs/**/*'));
 });
 
 gulp.task('deploy', function () {

@@ -87,28 +87,38 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 offset-1">
-          <form id="order-top" class="form-top wow animated fadeInLeftBig" data-form="Верхняя форма">
+          <form id="order-top" class="top-form wow animated fadeInLeftBig" data-form="Верхняя форма">
+            
             <!-- Hidden Required Fields -->
             <input type="hidden" name="project_name" value="Банный Чан">
             <input type="hidden" name="admin_email" value="forifelse@yandex.ru">
-            <input type="hidden" name="form_subject" value="Форма вверху сайта">
+            <input type="hidden" name="form_subject" value="Заявка на консультацию">
             <!-- END Hidden Required Fields -->
+            
             <h3>Оставьте заявку</h3>
+            
             <p>для получения консультации нашего специалиста</p>
+            
             <div class="container">
               <div class="row">
+                
                 <div class="col-md-4 col-sm-6">
                   <input type="text" name="Имя" placeholder="Ваше имя *">
-                </div><!-- ./col-md-4 -->
+                </div><!-- ./col-md-4 col-sm-6 -->
+                
                 <div class="col-md-4 col-sm-6">
                   <input type="tel" name="Телефон" placeholder="Ваш телефон *">
-                </div><!-- ./col-md-4 -->
+                </div><!-- ./col-md-4 col-sm-6 -->
+                
                 <div class="col-md-4 email">
                   <input type="email" name="Email" placeholder="Ваш email">
-                </div><!-- ./col-md-4 -->
+                </div><!-- ./col-md-4 email -->
+                
               </div><!-- ./row -->
+  
+              <button class="button">Оставить заявку</button>
+              
             </div><!-- ./container -->
-            <a href="#" class="button">Оставить заявку</a>
           </form>
         </div><!-- ./col-md-8 -->
       </div><!-- ./row -->
@@ -178,7 +188,7 @@
               <li><span>Лестница из лиственницы</span></li>
               <li><span>Сливной гусак</span> (оцинкованная труба с краником)</li>
             </ul>
-  
+            
             <h4>Стоимость комплекта:</h4>
             <p><span class="line-through">100.000</span> рублей</p>
             <p><span>80.000</span> рублей</p>
@@ -289,7 +299,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <iframe width="1000" height="600" src="https://www.youtube.com/embed/T4gybArWcUw" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/T4gybArWcUw" frameborder="0"
                 allowfullscreen></iframe>
       </div><!-- ./col-md-12 -->
     </div><!-- ./row -->
@@ -310,13 +320,13 @@
             <!-- Hidden Required Fields -->
             <input type="hidden" name="project_name" value="Банный Чан">
             <input type="hidden" name="admin_email" value="forifelse@yandex.ru">
-            <input type="hidden" name="form_subject" value="Форма внизу сайта">
+            <input type="hidden" name="form_subject" value="Сообщение с сайта">
             <!-- END Hidden Required Fields -->
             <input type="text" name="Имя" placeholder="Введите ваше имя...*" required>
             <input type="tel" name="Телефон" placeholder="Введите ваш телефон...*" required>
             <input type="email" name="Email" placeholder="Введите ваш email...">
             <textarea name="Сообщение" rows="10" placeholder="Ваше сообщение..."></textarea>
-            <a href="#" class="button">Отправить сообщение</a>
+            <button class="button">Отправить сообщение</button>
           </form>
         </div><!-- ./contacts-form -->
       </div><!-- ./col-md-6 -->
@@ -356,22 +366,20 @@
   </div><!-- ./container -->
 </section><!-- ./contacts -->
 
-<div class="hidden">
   <div class="answer_form">
     <h3>Спасибо за отклик!</h3>
     <p>В ближайшее время наши менеджеры обязательно свяжутся с вами</p>
-    <a href="#" class="button">Закрыть</a>
+    <!--<a href="#" class="button">Закрыть</a>-->
   </div><!-- ./answer_form -->
-</div><!-- ./hidden -->
 
 <div class="hidden">
   
   <form class="popup-form callback zoom-anim-dialog" id="callback">
-        
+    
     <!-- Hidden Required Fields -->
     <input type="hidden" name="project_name" value="Банный чан">
     <input type="hidden" name="admin_email" value="forifelse@yandex.ru">
-    <input type="hidden" name="form_subject" value="Новая заявка с сайта Банный Чан">
+    <input type="hidden" name="form_subject" value="Обратный звонок">
     <!-- END Hidden Required Fields -->
     
     <h3>Заказать звонок</h3>
@@ -402,7 +410,7 @@
 <![endif]-->
 
 <script src="./js/scripts.min.js"></script>
-<script src="./libs/common.js"></script>
+<script src="./js/common.min.js"></script>
 
 
 </body>

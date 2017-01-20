@@ -13,8 +13,12 @@ $(window).on('load', function() {
             opasity: 1
         });
     } else {
-        //Если мобильные девайсы
+        $('.player').mb_YTPlayer({containment: ''});
     }
+    if(md.mobile()) {
+        alert("Десктоп");
+    }
+
 
     //Popup-всплывающая форма
     $(".popup-with-move-anim").magnificPopup({
@@ -38,18 +42,19 @@ $(window).on('load', function() {
     });
 
     //E-mail Ajax Send
-    $(".bottom-form, .order-top, .callback").submit(function() { //Change
+    $(".bottom-form, .top-form, .callback").submit(function() { //Change
         var th = $(this);
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
-            $(".answer_form").magnificPopup();
+            $(".answer_form").fadeIn();
             setTimeout(function() {
                 // Done Functions
                 $.magnificPopup.close();
                 th.trigger("reset");
+                $(".answer_form").fadeOut();
             }, 2000);
         });
         return false;
@@ -126,8 +131,9 @@ $(window).on('load', function() {
     }
 
 
-    $("img, a").on("dragstart", function (event) {
-        event.preventDefault();
-    });
+    // $("img, a").on("dragstart", function (event) {
+    //     if ($(this).attr("href") === "#")
+    //         event.preventDefault();
+    // });
 
 });
