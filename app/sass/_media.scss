@@ -95,15 +95,11 @@
   /* */
 }
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 360px) {
   section {
     h2 {
       font-size: em(32px);
     }
-  }
-  header {
-    height: 100%;
   }
   .bg_container {
     .top-pannel {
@@ -194,6 +190,11 @@
       text-align: center;
     }
   }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /* */
 }
 
 /*==========  Mobile First  ========== */

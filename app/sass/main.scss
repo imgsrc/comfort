@@ -150,7 +150,7 @@ header {
   color: #fff;
   .top-pannel {
     position: absolute;
-    padding: 20px 0;
+    padding: 15px 0;
     z-index: 20;
     width: 100%;
     background-color: rgba(0, 0, 0, .25);
@@ -171,7 +171,14 @@ header {
       }
       .top-phone {
         padding-bottom: 30px;
-        font-size: em(30px);
+        font-size: em(35px);
+        font-family: $primary-font;
+        font-style: italic;
+        span {
+          img {
+            width: 27px;
+          }
+        }
       }
     }
   }

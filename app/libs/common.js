@@ -12,11 +12,9 @@ $(window).on('load', function() {
             startAt: 0,
             opasity: 1
         });
+        $('header').height($(window).height());
     } else {
-        $('.player').mb_YTPlayer({containment: ''});
-    }
-    if(md.mobile()) {
-        alert("Десктоп");
+        $('header').css('height', '100%');
     }
 
 
@@ -66,8 +64,6 @@ $(window).on('load', function() {
         midClick: true
     });
 
-
-    $('header').height($(window).height());
 
     //Owl Carousel 2
     $('.owl-carousel').owlCarousel({
