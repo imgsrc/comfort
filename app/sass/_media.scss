@@ -101,6 +101,10 @@
       font-size: em(32px);
     }
   }
+  header {
+    background: url("../img/air_b.jpg") no-repeat center top;
+    background-size: cover;
+  }
   .bg_container {
     .top-pannel {
       &-content {

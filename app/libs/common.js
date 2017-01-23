@@ -14,7 +14,6 @@ $(window).on('load', function() {
         });
         $('header').height($(window).height());
     } else {
-        $('header').css('height', '100%');
     }
 
 
