@@ -3,6 +3,20 @@
 
 /*==========  Desktop First  ========== */
 
+@media only screen and (max-width: 1440px) {
+  .what-is {
+    &-text {
+      p {
+        font-size: em(18px);
+      }
+      .text-center {
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1370px) {
   .bg_container {
     .top-pannel {
@@ -61,12 +75,49 @@
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
   .bg-form-order {
-    .form-top {
+    .top-form {
       input {
         padding: 10px 10px;
         font-size: em(16px);
+      }
+    }
+  }
+  .what-is {
+    &-text {
+      padding: 20px 35px;
+      p {
+        font-size: em(16px);
+        margin: 10px 0;
+      }
+    }
+    .text-center {
+      margin-top: 70px;
+    }
+  }
+  .services {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .bg-form-order {
+    .top-form {
+      input {
+        padding: 10px 10px;
+        font-size: em(16px);
+      }
+    }
+  }
+  .what-is {
+    &-2-col {
+      width: 100%;
+      h2 {
+        margin-top: 30px;
+      }
+      .text-center {
+        margin: 30px 0;
       }
     }
   }
@@ -79,29 +130,8 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  .bg_container {
-    .top-pannel {
-      &-content {
-        h2 {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width: 480px) {
-  /* */
-}
-
-@media only screen and (max-width: 360px) {
-  section {
-    h2 {
-      font-size: em(32px);
-    }
-  }
   header {
+    min-height: 100vh;
     background: url("../img/air_b.jpg") no-repeat center top;
     background-size: cover;
   }
@@ -114,19 +144,221 @@
       }
     }
   }
+  .feature {
+    .feature-item {
+      .feat_item_cont {
+        height: 100%;
+      }
+    }
+    .ground {
+      margin-bottom: 20px;
+    }
+  }
+  .services {
+    height: 100vh;
+    &-content {
+      .service-center {
+        margin-bottom: 35px;
+        p {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+  .manufacturing {
+    iframe {
+      width: 700px;
+      height: 500px;
+    }
+  }
+  .contacts {
+    .contacts-form {
+      margin-bottom: 30px;
+    }
+    .contacts-address {
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bg-form-order {
+    .top-form {
+      input {
+        width: 100%;
+      }
+    }
+  }
+  .manufacturing {
+    iframe {
+      width: 100%;
+      height: 400px;
+    }
+  }
+  .contacts {
+    h2 {
+      font-size: em(40px);
+      &:after {
+        top: 190px;
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 414px) {
+  section {
+    h2 {
+      font-size: em(32px);
+    }
+  }
+  .bg_container {
+    .top-pannel {
+      padding-bottom: 20px;
+      &-content {
+        .logo {
+          img {
+            width: 160px;
+          }
+        }
+        .top-phone {
+          text-align: right;
+          font-size: em(30px);
+        }
+        .top-button {
+          text-align: right;
+          .button {
+            padding: 10px 20px;
+            font-size: em(16px);
+          }
+        }
+      }
+    }
+  }
+  .bg-content-wrapper {
+    top: 18%;
+  }
+  .bg-form-order {
+    top: 46%;
+  }
+  .manufacturing {
+    iframe {
+      width: 100%;
+      height: 300px;
+    }
+  }
+  .services {
+    min-height: 850px;
+    &-content {
+      h2 {
+        padding: 30px 0;
+        &::after {
+          top: 85px;
+        }
+      }
+      .service-center {
+        margin-bottom: 20px;
+        h3 {
+          font-size: em(22px);
+          margin: 13px 0;
+        }
+        p {
+          font-size: em(16px);
+        }
+      }
+    }
+    .bottom-text {
+      font-size: em(20px);
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .bg_container {
+    .top-pannel {
+      &-content {
+        .logo {
+          img {
+            width: 130px;
+          }
+        }
+        .top-phone {
+          font-size: em(24px);
+        }
+        .top-button {
+          .button {
+            padding: 8px 16px;
+            font-size: em(14px);
+          }
+        }
+      }
+    }
+  }
+  .bg-content-wrapper {
+    top: 17%;
+  }
+  .bg-form-order {
+    top: 43%;
+  }
+  .services {
+    min-height: 800px;
+    &-content {
+      h2 {
+        &::after {
+          top: 100px;
+        }
+      }
+      .service-center {
+        p {
+          font-size: em(14px);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .bg_container {
+    .top-pannel {
+      padding-bottom: 20px;
+      &-content {
+        .logo {
+          img {
+            width: 100px;
+          }
+        }
+        .top-phone {
+          font-size: em(20px);
+        }
+        .top-button {
+          .button {
+            padding: 8px 16px;
+            font-size: em(14px);
+          }
+        }
+      ;
+      }
+    }
+  }
   .bg-content-wrapper {
     .bg-content {
       h1 {
-        font-size: em(40px);
+        font-size: em(32px);
+        margin-bottom: 12px;
+      }
+      span {
+        font-size: 22px;
       }
     }
   }
   .bg-form-order {
+    top: 40%;
     .top-form {
+      padding: 15px 15px 20px;
       input {
-        &[type=email] {
-          display: none;
-        }
+        padding: 6px 10px;
+        font-size: em(14px);
+        margin-bottom: 20px;
       }
     }
   }
@@ -135,13 +367,21 @@
       width: 100%;
     }
     &-text {
-      padding: 26px 35px;
+      padding: 0 15px;
       .heading {
         margin-bottom: 20px;
+        &::after {
+          top: 80px;
+        }
       }
     }
   }
   .feature {
+    h2 {
+      &::after {
+        top: 100px;
+      }
+    }
     &-item {
       &:hover .feat_item_cont {
         padding-top: 0;
@@ -160,7 +400,7 @@
       h2 {
         padding: 30px 0;
         &::after {
-          top: 145px;
+          top: 90px;
         }
       }
       .service-center {
@@ -173,11 +413,7 @@
   }
   .manufacturing {
     h2::after {
-      top: 175px;
-    }
-    iframe {
-      width: 100%;
-      height: 180px;
+      top: 115px;
     }
   }
   .contacts {
@@ -198,7 +434,44 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  /* */
+  .bg-content-wrapper {
+    .bg-content {
+      h1 {
+        font-size: em(28px);
+        margin-bottom: 10px;
+      }
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+  .bg-form-order {
+    top: 38%;
+    .top-form {
+      padding: 12px 12px 15px;
+    }
+  }
+  .services {
+    h2 {
+      &::after {
+        top: 110px;
+      }
+    }
+  }
+  .manufacturing {
+    h2::after {
+      top: 140px;
+    }
+  }
+  .contacts {
+    h2 {
+      margin-bottom: 50px;
+      &::after {
+        top: 215px;
+      }
+    }
+
+  }
 }
 
 /*==========  Mobile First  ========== */
